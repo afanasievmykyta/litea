@@ -74,7 +74,6 @@ class FormsController extends Controller
     public function download(){
 
         $client = Client::find($id);
-        return response()->download($pathToFile, $name, $last_name);
 
         /* return view ('index')->with('client', $client); */
 
