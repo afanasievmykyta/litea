@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
-            <div class="col-2 align-self-end"><a href="/" class="btn btn-light btn-sm">Back</a></div>
+            <div class="col-2 align-self-end"><a href="/" class="btn btn-light btn-sm">Zpět</a></div>
 
             <div class="panel-body">
               <ul class="list-group">

@@ -15,7 +15,7 @@ class FormsController extends Controller
      */
     public function index()
     {
-        //
+        //Klienti z databaze se zobrazi v index souboru
         $clients = Client::all();
         return view('/index')->with('clients', $clients);
     }
@@ -27,7 +27,7 @@ class FormsController extends Controller
      */
     public function create()
     {
-        //
+        //create soubor, kde je formular pro vytvoreni noveho klienta
         return view ('create');
 
     }
@@ -40,14 +40,16 @@ class FormsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //overeni validity
         $this->validate($request, [
             'name' => 'required',
             'last_name' => 'required',
+            'call_time'=> 'reqiured',
             'phone'=> 'required',
             'agree'=> 'required'
       ]);
 
+        //vytvoreni noveho klienta
         $client = new Client;
         $client->name = $request->input('name');
         $client->last_name = $request->input('last_name');
@@ -66,7 +68,7 @@ class FormsController extends Controller
      */
     public function show($id)
     {
-        //
+        //dle id vygeneruj klienta
         $client = Client::find($id);
         return view ('show')->with('client', $client);
     }

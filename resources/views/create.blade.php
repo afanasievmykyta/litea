@@ -5,7 +5,7 @@
 <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-
+                <div class="col-2 align-self-end"><a href="/" class="btn btn-light btn-sm">Zpět</a></div>
                 <div class="card-body">
                     <form action="{{action('FormsController@store')}}" method="POST">
                          <?= csrf_field() ?>

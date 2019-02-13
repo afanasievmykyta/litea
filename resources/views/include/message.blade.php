@@ -1,3 +1,6 @@
+
+{{-- Nastaveni hlaseni chyb, v pripade, ze formular neni radne vyplnen, polozka neni validni
+ --}}
 @if(count($errors) > 0)
 @foreach($errors->all() as $error)
   <div class="alert alert-danger">
